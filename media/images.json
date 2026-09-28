@@ -1,0 +1,498 @@
+{
+ "hero-house": {
+  "widths": [
+   640,
+   1280,
+   1920
+  ],
+  "w": 1920,
+  "h": 1080,
+  "caption": "Cedar House, from the opening (painted plate + image-to-video, v1.0)"
+ },
+ "cast-portrait": {
+  "widths": [
+   640,
+   1280,
+   1920,
+   2560
+  ],
+  "w": 3840,
+  "h": 2160,
+  "caption": "The full cast by the lounge fire (staged in engine from v1.0 assets)"
+ },
+ "cast-wide": {
+  "widths": [
+   640,
+   1280,
+   1920,
+   2560
+  ],
+  "w": 3840,
+  "h": 2160,
+  "caption": "The lounge with the cast (v1.0, in engine)"
+ },
+ "lounge-wide": {
+  "widths": [
+   640,
+   1280,
+   1920,
+   2560
+  ],
+  "w": 3840,
+  "h": 2160,
+  "caption": "The lounge, game camera (v1.0)"
+ },
+ "lounge-empty": {
+  "widths": [
+   640,
+   1280,
+   1920,
+   2560
+  ],
+  "w": 3840,
+  "h": 2160,
+  "caption": "The lounge, empty (v1.0)"
+ },
+ "veranda": {
+  "widths": [
+   640,
+   1280,
+   1920,
+   2560
+  ],
+  "w": 3840,
+  "h": 2160,
+  "caption": "The covered veranda in monsoon rain (v1.0)"
+ },
+ "veranda-close": {
+  "widths": [
+   640,
+   1280,
+   1920,
+   2560
+  ],
+  "w": 3840,
+  "h": 2160,
+  "caption": "Warm shelter, cold rain: the veranda door (v1.0)"
+ },
+ "corridor": {
+  "widths": [
+   640,
+   1280,
+   1920,
+   2560
+  ],
+  "w": 3840,
+  "h": 2160,
+  "caption": "The upper corridor (v1.0)"
+ },
+ "door-group": {
+  "widths": [
+   640,
+   1280,
+   1920,
+   2560
+  ],
+  "w": 3840,
+  "h": 2160,
+  "caption": "Outside Victor's door (v1.0)"
+ },
+ "dawn": {
+  "widths": [
+   640,
+   1280,
+   1920,
+   2560
+  ],
+  "w": 3840,
+  "h": 2160,
+  "caption": "Near dawn (v1.0)"
+ },
+ "victor-room": {
+  "widths": [
+   640,
+   1280,
+   1920,
+   2560
+  ],
+  "w": 3840,
+  "h": 2160,
+  "caption": "Victor's room during the investigation (v1.0)"
+ },
+ "victor-discovery": {
+  "widths": [
+   640,
+   1280,
+   1920,
+   2560
+  ],
+  "w": 3840,
+  "h": 2160,
+  "caption": "The discovery (v1.0)"
+ },
+ "ada-welcome": {
+  "widths": [
+   640,
+   1280,
+   1920
+  ],
+  "w": 1920,
+  "h": 1080,
+  "caption": "Ada welcomes Aren (v1.0, trailer framing)"
+ },
+ "mira-intro": {
+  "widths": [
+   640,
+   1280,
+   1920
+  ],
+  "w": 1920,
+  "h": 1080,
+  "caption": "Mira Senn, writer (v1.0, trailer framing)"
+ },
+ "victor-mcu": {
+  "widths": [
+   640,
+   1280,
+   1920
+  ],
+  "w": 1920,
+  "h": 1080,
+  "caption": "Victor Soren arrives (v1.0, trailer framing)"
+ },
+ "aren-victor": {
+  "widths": [
+   640,
+   1280,
+   1920
+  ],
+  "w": 1920,
+  "h": 1080,
+  "caption": "Aren and Victor (v1.0, trailer framing)"
+ },
+ "explore-hud": {
+  "widths": [
+   640,
+   1280,
+   1920
+  ],
+  "w": 1920,
+  "h": 1080,
+  "caption": "Exploring with the live HUD and prompts (v1.0)"
+ },
+ "watch-panel": {
+  "widths": [
+   640,
+   1280,
+   1920
+  ],
+  "w": 1920,
+  "h": 1080,
+  "caption": "Inspecting the stopped watch (v1.0)"
+ },
+ "watch-glint": {
+  "widths": [
+   640,
+   1280,
+   1920
+  ],
+  "w": 1920,
+  "h": 1080,
+  "caption": "The watch on the rug (v1.0)"
+ },
+ "topics": {
+  "widths": [
+   640,
+   1280,
+   1920
+  ],
+  "w": 1920,
+  "h": 1080,
+  "caption": "Choosing what to ask (v1.0)"
+ },
+ "observe": {
+  "widths": [
+   640,
+   1280,
+   1920
+  ],
+  "w": 1920,
+  "h": 1080,
+  "caption": "A closer look at a person (v1.0)"
+ },
+ "case-notes": {
+  "widths": [
+   640,
+   1280,
+   1920
+  ],
+  "w": 1920,
+  "h": 1080,
+  "caption": "A Case Note: clue words placed into a sentence (v1.0)"
+ },
+ "aha": {
+  "widths": [
+   640,
+   1280,
+   1920
+  ],
+  "w": 1920,
+  "h": 1080,
+  "caption": "9:08 against 9:14: the connection breaks (v1.0)"
+ },
+ "requestion": {
+  "widths": [
+   640,
+   1280,
+   1920
+  ],
+  "w": 1920,
+  "h": 1080,
+  "caption": "Re-questioning with evidence (v1.0)"
+ },
+ "latch-step": {
+  "widths": [
+   640,
+   1280,
+   1920,
+   2560
+  ],
+  "w": 3360,
+  "h": 1890,
+  "caption": "Victor's door: the latch reconstruction, step 1 of 3 (v1.0)"
+ },
+ "latch-done": {
+  "widths": [
+   640,
+   1280,
+   1920,
+   2560
+  ],
+  "w": 3360,
+  "h": 1890,
+  "caption": "The room secured itself (v1.0)"
+ },
+ "knocks-landing": {
+  "widths": [
+   640,
+   1280,
+   1920
+  ],
+  "w": 1920,
+  "h": 1080,
+  "caption": "The Four Knocks: the marks on the landing (v1.0)"
+ },
+ "residual": {
+  "widths": [
+   640,
+   1280,
+   1920
+  ],
+  "w": 1920,
+  "h": 1080,
+  "caption": "A Residual in the corridor (v1.0)"
+ },
+ "p-3d-hero": {
+  "widths": [
+   640,
+   1280,
+   1920
+  ],
+  "w": 1920,
+  "h": 1080,
+  "caption": "Step 8A-R: the full-3D hero scene (Blender + Three.js), first human cast"
+ },
+ "p-3d-proto": {
+  "widths": [
+   640,
+   1280,
+   1920
+  ],
+  "w": 1920,
+  "h": 1080,
+  "caption": "Step 8A: the first technical prototype (Three.js, TypeScript, Rapier)"
+ },
+ "p-board-human": {
+  "widths": [
+   640,
+   1280,
+   1448
+  ],
+  "w": 1448,
+  "h": 1086,
+  "caption": "Early direction board: realistic human cast (generated by the creator in ChatGPT)"
+ },
+ "p-board-cast": {
+  "widths": [
+   640,
+   1280,
+   1672
+  ],
+  "w": 1672,
+  "h": 752,
+  "caption": "Revised direction board: the illustrated animal cast (generated by the creator in ChatGPT)"
+ },
+ "p-step6": {
+  "widths": [
+   640,
+   1280,
+   1600
+  ],
+  "w": 1600,
+  "h": 1000,
+  "caption": "Step 6: the first 2.5D lounge"
+ },
+ "p-step9-lounge": {
+  "widths": [
+   640,
+   1280,
+   1600
+  ],
+  "w": 1600,
+  "h": 1000,
+  "caption": "Step 9: the browser-first build"
+ },
+ "p-step9-room": {
+  "widths": [
+   640,
+   1280,
+   1600
+  ],
+  "w": 1600,
+  "h": 1000,
+  "caption": "Before: Victor's room as a standalone set (Step 9)"
+ },
+ "p-step11-corridor": {
+  "widths": [
+   640,
+   992
+  ],
+  "w": 992,
+  "h": 1000,
+  "caption": "Before: the corridor as a floating strip (Step 11)"
+ },
+ "p-step12-veranda": {
+  "widths": [
+   640,
+   1280,
+   1600
+  ],
+  "w": 1600,
+  "h": 1000,
+  "caption": "Step 12: the veranda facade is the lounge wall"
+ },
+ "p-headrig": {
+  "widths": [
+   640,
+   1280,
+   1600
+  ],
+  "w": 1600,
+  "h": 411,
+  "caption": "Final polish: the head rig before/after (Step 15)"
+ },
+ "op-v1-house": {
+  "widths": [
+   640,
+   960
+  ],
+  "w": 960,
+  "h": 400,
+  "caption": "Opening v1: 3D cinematic (Step 13)"
+ },
+ "op-v2-house": {
+  "widths": [
+   640,
+   960
+  ],
+  "w": 960,
+  "h": 400,
+  "caption": "Opening v2: code-drawn 2D"
+ },
+ "op-v3-house": {
+  "widths": [
+   640,
+   960
+  ],
+  "w": 960,
+  "h": 400,
+  "caption": "Opening v3: ComfyUI painted + animated (13B)"
+ },
+ "op-final-house": {
+  "widths": [
+   640,
+   1280,
+   1920
+  ],
+  "w": 1920,
+  "h": 800,
+  "caption": "Final: hybrid (13C)"
+ },
+ "op-v1-ghat": {
+  "widths": [
+   640,
+   960
+  ],
+  "w": 960,
+  "h": 400,
+  "caption": "Opening v1: 3D cinematic (Step 13)"
+ },
+ "op-v2-ghat": {
+  "widths": [
+   640,
+   960
+  ],
+  "w": 960,
+  "h": 400,
+  "caption": "Opening v2: code-drawn 2D"
+ },
+ "op-v3-ghat": {
+  "widths": [
+   640,
+   960
+  ],
+  "w": 960,
+  "h": 400,
+  "caption": "Opening v3: ComfyUI painted + animated (13B)"
+ },
+ "op-final-ghat": {
+  "widths": [
+   640,
+   1280,
+   1920
+  ],
+  "w": 1920,
+  "h": 800,
+  "caption": "Final: hybrid (13C) keeps the code-drawn ghat road"
+ },
+ "tr-title": {
+  "widths": [
+   640,
+   1280,
+   1920
+  ],
+  "w": 1920,
+  "h": 1080,
+  "caption": "Trailer: title"
+ },
+ "tr-914": {
+  "widths": [
+   640,
+   1280,
+   1920
+  ],
+  "w": 1920,
+  "h": 1080,
+  "caption": "Trailer: 9:14 PM"
+ },
+ "tr-fourth": {
+  "widths": [
+   640,
+   1280,
+   1920
+  ],
+  "w": 1920,
+  "h": 1080,
+  "caption": "Trailer: the fourth knock"
+ }
+}

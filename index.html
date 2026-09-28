@@ -1,0 +1,601 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>The Fourth Knock: a case study in directing AI production</title>
+<meta name="description" content="A short 2.5D goofy-noir murder mystery, creative-directed through an AI-native production pipeline. Play it in your browser, watch the trailer, and see how it was made.">
+<meta name="theme-color" content="#0b1117">
+<meta property="og:type" content="website">
+<meta property="og:title" content="The Fourth Knock">
+<meta property="og:description" content="An impossible locked-room killing. A broken timeline. Four knocks nobody can explain. A short 2.5D goofy-noir murder mystery, creative-directed through an AI-native production pipeline.">
+<meta property="og:image" content="https://nikhilsatishdesai.github.io/the-fourth-knock/media/img/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="https://nikhilsatishdesai.github.io/the-fourth-knock/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preload" href="fonts/BarlowCondensed-700.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/Newsreader-var.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" as="image" href="media/img/hero-house-1280.webp" imagesrcset="media/img/hero-house-640.webp 640w, media/img/hero-house-1280.webp 1280w, media/img/hero-house-1920.webp 1920w" imagesizes="100vw">
+<link rel="stylesheet" href="styles.css">
+<script>document.documentElement.classList.add('js')</script>
+</head>
+<body>
+<a class="skip" href="#game">Skip to the case study</a>
+
+<nav class="nav" aria-label="Main">
+  <a class="brand" href="#top" aria-label="The Fourth Knock, top of page"><span class="knock-mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span><span>The Fourth Knock</span></a>
+  <div class="nav-links"><a href="#game">The game</a><a href="#role">My role</a><a href="#pivots">Process</a><a href="#made">How it was made</a><a href="#audio">Audio</a></div>
+  <a class="btn primary" href="play/">Play<span class="arrow" aria-hidden="true">▶</span></a>
+</nav>
+
+<!-- 01 HERO ----------------------------------------------------------------------------------------------- -->
+<header class="hero" id="top">
+  <div class="hero-media" aria-hidden="true">
+    <img src="media/img/hero-house-1280.webp" srcset="media/img/hero-house-640.webp 640w, media/img/hero-house-1280.webp 1280w, media/img/hero-house-1920.webp 1920w" sizes="100vw" width="1920" height="1080" alt="Cedar House at night in monsoon rain, its windows lit, with Aren Vale at the foot of the steps" fetchpriority="high" decoding="async">
+    <video data-src-mp4="media/video/loop-house.mp4" data-src-webm="media/video/loop-house.webm" muted loop playsinline preload="none"></video>
+  </div>
+  <div class="wrap hero-inner">
+    <p class="byline">A case study · Nikhil Desai · Creative direction &amp; AI orchestration</p>
+    <h1 class="wordmark"><span class="knock-mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span><span class="wm-text"><span class="wm-the">The</span><span class="wm-fourth">Fourth</span><span class="wm-knock">Knock</span></span></h1>
+    <p class="lead">A short 2.5D goofy-noir murder mystery, creative-directed through an AI-native production pipeline.</p>
+    <p class="teaser">An impossible locked-room killing.<br>A broken timeline.<br>Four knocks nobody can explain.</p>
+    <div class="ctas">
+      <a class="btn primary" href="play/">Play the game <span class="arrow" aria-hidden="true">▶</span></a>
+      <a class="btn" href="#trailer" data-trailer-link>Watch the trailer</a>
+    </div>
+    <p class="hero-meta">Plays in a desktop browser · keyboard · about 18 minutes · no install</p>
+  </div>
+</header>
+
+<!-- TRAILER -------------------------------------------------------------------------------------------------- -->
+<section class="trailer-section" id="trailer" aria-label="Official trailer">
+  <div class="wrap">
+    <div class="player" id="player">
+      <img src="media/img/cast-portrait-1280.webp" srcset="media/img/cast-portrait-640.webp 640w, media/img/cast-portrait-1280.webp 1280w, media/img/cast-portrait-1920.webp 1920w, media/img/cast-portrait-2560.webp 2560w" sizes="(min-width: 1260px) 1200px, 100vw" width="3840" height="2160" alt="Aren, Mira, Ada, Victor and Elias together by the lounge fire in Cedar House" loading="lazy" decoding="async">
+      <button class="player-btn" type="button" aria-label="Play the official trailer, 1 minute 19 seconds, with sound">
+        <span class="play-disc" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 3l16 9-16 9z" fill="currentColor"/></svg></span>
+        <span class="player-label">Official trailer · 1:19<small>Captured from the finished game · sound on</small></span>
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- 02 THE GAME ---------------------------------------------------------------------------------------------- -->
+<section id="game">
+  <div class="wrap">
+    <div class="split">
+      <div class="reveal">
+        <p class="eyebrow">01 · The game</p>
+        <h2 class="h2">Something happened at Cedar House.</h2>
+        <p class="lead"><em>The Fourth Knock</em> is a short 2.5D murder mystery set inside Cedar House, a colourful creature guesthouse in the Western Ghats, cut off by the 1999 monsoon.</p>
+        <p>Aren Vale, a platypus traveller who was only passing through, becomes an accidental investigator when property developer Victor Soren is found dead inside an apparently locked room.</p>
+        <div class="facts">
+          <div class="fact"><span class="time">9:08<small class="muted"> PM</small></span><p>Victor’s broken watch stopped.</p></div>
+          <div class="fact heard"><span class="time">9:14<small class="muted"> PM</small></span><p>Everyone downstairs heard four knocks.</p></div>
+        </div>
+        <p class="verdict">The murder has a rational solution. <span>The knocks do not.</span></p>
+      </div>
+      <div class="stack reveal">
+        <figure>
+          <div class="fig"><img src="media/img/victor-room-1280.webp" srcset="media/img/victor-room-640.webp 640w, media/img/victor-room-1280.webp 1280w, media/img/victor-room-1920.webp 1920w, media/img/victor-room-2560.webp 2560w" sizes="(min-width: 1000px) 620px, 100vw" width="3840" height="2160" alt="Aren in Victor’s room during the investigation, the desk lamp lit and rain on the windows" loading="lazy" decoding="async"></div>
+          <figcaption><b>Victor’s room.</b> The fixed, elevated camera shows the whole room; the story decides where you look.</figcaption>
+        </figure>
+        <figure>
+          <div class="fig"><img src="media/img/watch-panel-1280.webp" srcset="media/img/watch-panel-640.webp 640w, media/img/watch-panel-1280.webp 1280w, media/img/watch-panel-1920.webp 1920w" sizes="(min-width: 1000px) 620px, 100vw" width="1920" height="1080" alt="The stopped watch clue panel: a cracked mechanical watch reading 9:08, with spots to examine" loading="lazy" decoding="async"></div>
+          <figcaption><b>The stopped watch.</b> Evidence opens as an illustrated panel with details to examine.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 03 THE PROJECT QUESTION -------------------------------------------------------------------------------- -->
+<section id="question">
+  <div class="wrap reveal">
+    <p class="eyebrow">02 · The project question</p>
+    <p class="quote">Can AI systems be directed like a <em>multidisciplinary production team</em>, rather than used as isolated generators?</p>
+    <div class="text" style="margin-top:34px">
+      <p class="lead">That was the experiment underneath the game.</p>
+      <p>One coherent creative direction had to survive every discipline: story, mystery design, game mechanics, illustration, 3D, animation, voice, music, sound and implementation. It had to survive a long production with handoffs between models, approaches that failed and deliberate pivots, and still arrive as a finished game someone can play in a browser.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 04 MY ROLE ---------------------------------------------------------------------------------------------- -->
+<section class="paper" id="role">
+  <div class="wrap reveal">
+    <p class="eyebrow">03 · My role</p>
+    <h2 class="h2">I directed. AI systems executed.</h2>
+    <div class="text">
+      <p class="lead">I didn’t approach <em>The Fourth Knock</em> as a solo-programming exercise. I acted as its creative director and AI production director.</p>
+      <p>I defined the premise, the mystery, the characters, the gameplay, the visual direction and the quality bar. Then I directed AI systems through implementation, critique, iteration and final delivery: writing the briefs, reviewing each milestone, rejecting what didn’t serve the game, and deciding what shipped.</p>
+    </div>
+    <div class="roles">
+      <div class="role-card">
+        <span class="stamp">Directed</span>
+        <h3>By me</h3>
+        <ul><li>Concept</li><li>Mystery design</li><li>Characters</li><li>Narrative structure</li><li>Gameplay direction</li><li>Visual direction</li><li>Tone</li><li>Product decisions</li><li>Critique</li><li>Model selection</li><li>Production pivots</li><li>Quality decisions</li><li>Final acceptance</li></ul>
+      </div>
+      <div class="role-card exec">
+        <h3>Executed by AI systems, under direction</h3>
+        <ul><li>Programming &amp; runtime</li><li>Asset generation</li><li>Environment construction</li><li>Animation implementation</li><li>Voice performance</li><li>Music &amp; sound</li><li>Technical tooling</li><li>Testing &amp; validation</li><li>Rendering &amp; capture</li><li>Production fixes</li></ul>
+      </div>
+    </div>
+    <p class="role-line">Creative Direction · Narrative &amp; Game Direction · AI Orchestration · Product Direction</p>
+  </div>
+</section>
+
+<!-- 05 NORTH STAR + ART DIRECTION ---------------------------------------------------------------------------- -->
+<section id="north-star">
+  <div class="wrap">
+    <div class="reveal">
+      <p class="eyebrow">04 · Creative north star</p>
+      <p class="quote">Goofy noir on the outside. <em>Proper mystery underneath.</em></p>
+      <div class="text" style="margin-top:28px">
+        <p>The world could be colourful, charming, funny and stylised, while the murder stayed serious. So noir never meant “make everything dark”. It came from framing, rain, lighting, negative space, typography, sound and the language of detection.</p>
+      </div>
+    </div>
+    <div class="duo reveal">
+      <figure><span class="label">On the outside</span><div class="fig"><img src="media/img/ada-welcome-1280.webp" srcset="media/img/ada-welcome-640.webp 640w, media/img/ada-welcome-1280.webp 1280w, media/img/ada-welcome-1920.webp 1920w" sizes="(min-width: 720px) 50vw, 100vw" width="1920" height="1080" alt="Ada Moss, the tortoise who keeps Cedar House, welcomes Aren with her keys in hand" loading="lazy" decoding="async"></div><figcaption>“This is still a guesthouse, not a pond.” Ada welcomes a very wet guest.</figcaption></figure>
+      <figure><span class="label">Underneath</span><div class="fig"><img src="media/img/door-group-1280.webp" srcset="media/img/door-group-640.webp 640w, media/img/door-group-1280.webp 1280w, media/img/door-group-1920.webp 1920w, media/img/door-group-2560.webp 2560w" sizes="(min-width: 720px) 50vw, 100vw" width="3840" height="2160" alt="Aren, Mira, Ada and Elias gathered in the dark upper corridor outside Victor’s door" loading="lazy" decoding="async"></div><figcaption>Outside a door nobody answers.</figcaption></figure>
+    </div>
+    <p class="takeaway reveal"><span class="knock-mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span>Cozy enough to enter, noir enough to distrust.</p>
+
+    <div class="reveal" style="margin-top:clamp(70px,11vw,130px)">
+      <p class="eyebrow">Art direction</p>
+      <h2 class="h2">Warm shelter. Cold rain.</h2>
+      <div class="text"><p>Every frame is built on one contrast: amber light, dark timber and warm textiles inside, cool blue monsoon light pressing at the glass. The rain stays outside, even in interior shots, so the house always reads as shelter.</p></div>
+      <div class="palette" role="list" aria-label="The game’s palette">
+        <div class="chip" role="listitem"><i style="background:#f0c88b"></i><div><b>Amber</b><span>lamplight #F0C88B</span></div></div>
+        <div class="chip" role="listitem"><i style="background:#4b3124"></i><div><b>Dark teak</b><span>timber #4B3124</span></div></div>
+        <div class="chip" role="listitem"><i style="background:#cda75f"></i><div><b>Mustard</b><span>brass #CDA75F</span></div></div>
+        <div class="chip" role="listitem"><i style="background:#b3533b"></i><div><b>Rust</b><span>#B3533B</span></div></div>
+        <div class="chip" role="listitem"><i style="background:#7d8a52"></i><div><b>Moss</b><span>#7D8A52</span></div></div>
+        <div class="chip" role="listitem"><i style="background:#efe4c8"></i><div><b>Cream</b><span>paper #EFE4C8</span></div></div>
+        <div class="chip" role="listitem"><i style="background:#2f4759"></i><div><b>Monsoon blue</b><span>#2F4759</span></div></div>
+        <div class="chip" role="listitem"><i style="background:#111920"></i><div><b>Charcoal</b><span>ink #111920</span></div></div>
+      </div>
+    </div>
+    <div class="grid-2 reveal">
+      <figure><div class="fig"><img src="media/img/veranda-close-1280.webp" srcset="media/img/veranda-close-640.webp 640w, media/img/veranda-close-1280.webp 1280w, media/img/veranda-close-1920.webp 1920w, media/img/veranda-close-2560.webp 2560w" sizes="(min-width: 720px) 50vw, 100vw" width="3840" height="2160" alt="The covered veranda at night: rain beyond the roof, warm light from the lanterns and the open front door" loading="lazy" decoding="async"></div><figcaption><b>The veranda.</b> Warm light at the door, cold rain beyond the roof.</figcaption></figure>
+      <figure><div class="fig"><img src="media/img/lounge-empty-1280.webp" srcset="media/img/lounge-empty-640.webp 640w, media/img/lounge-empty-1280.webp 1280w, media/img/lounge-empty-1920.webp 1920w, media/img/lounge-empty-2560.webp 2560w" sizes="(min-width: 720px) 50vw, 100vw" width="3840" height="2160" alt="The lounge of Cedar House: a fire in the hearth, a patterned rug, a sofa and the staircase, blue rain at the windows" loading="lazy" decoding="async"></div><figcaption><b>The lounge.</b> Hearth, dhurrie, dark timber; the storm stays behind the glass.</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- 06 GAMEPLAY ---------------------------------------------------------------------------------------------- -->
+<section id="gameplay">
+  <div class="wrap">
+    <div class="reveal">
+      <p class="eyebrow">05 · Gameplay</p>
+      <h2 class="h2">The player actually solves something.</h2>
+      <div class="text"><p class="lead">This isn’t a walking simulator or a visual novel. You collect words, build deductions, bring them back to the people they contradict, and the case only moves when the logic holds.</p></div>
+      <ol class="loopchain" aria-label="The core loop"><li>Observe</li><li>Inspect</li><li>Question</li><li>Collect clue words</li><li>Form deduction</li><li>Re-question</li><li>Resolve contradiction</li></ol>
+    </div>
+    <ol class="steps">
+      <li class="step reveal wide"><div class="loopbox fig"><video class="loop" muted loop playsinline preload="none" width="1280" height="720" poster="media/img/loop-explore-poster.webp" data-src-webm="media/video/loop-explore.webm" data-src-mp4="media/video/loop-explore.mp4" aria-label="Aren walking through the lounge with the live game HUD and interaction prompts"></video><button class="loop-toggle" type="button" aria-label="Pause the loop" hidden>❚❚</button></div><h3>Observe</h3><p>Walk Cedar House in real time. Anything worth a closer look is marked in the world.</p></li>
+      <li class="step reveal"><div class="fig"><img src="media/img/watch-panel-1280.webp" srcset="media/img/watch-panel-640.webp 640w, media/img/watch-panel-1280.webp 1280w, media/img/watch-panel-1920.webp 1920w" sizes="(min-width: 1000px) 300px, (min-width: 720px) 50vw, 100vw" width="1920" height="1080" alt="The stopped watch inspection panel" loading="lazy" decoding="async"></div><h3>Inspect</h3><p>Evidence opens as an illustrated panel with details to examine.</p></li>
+      <li class="step reveal"><div class="fig"><img src="media/img/topics-1280.webp" srcset="media/img/topics-640.webp 640w, media/img/topics-1280.webp 1280w, media/img/topics-1920.webp 1920w" sizes="(min-width: 1000px) 300px, (min-width: 720px) 50vw, 100vw" width="1920" height="1080" alt="The conversation panel listing topics to ask Mira about" loading="lazy" decoding="async"></div><h3>Question</h3><p>Choose what to ask. Everyone answers in character, with a voice.</p></li>
+      <li class="step reveal"><div class="fig"><img src="media/img/observe-1280.webp" srcset="media/img/observe-640.webp 640w, media/img/observe-1280.webp 1280w, media/img/observe-1920.webp 1920w" sizes="(min-width: 1000px) 300px, (min-width: 720px) 50vw, 100vw" width="1920" height="1080" alt="A closer look at Mira, with details to notice" loading="lazy" decoding="async"></div><h3>Collect clue words</h3><p>What you notice becomes words in your case file.</p></li>
+      <li class="step reveal"><div class="fig"><img src="media/img/case-notes-1280.webp" srcset="media/img/case-notes-640.webp 640w, media/img/case-notes-1280.webp 1280w, media/img/case-notes-1920.webp 1920w" sizes="(min-width: 1000px) 300px, (min-width: 720px) 50vw, 100vw" width="1920" height="1080" alt="A Case Note with blanks to fill from collected clue words" loading="lazy" decoding="async"></div><h3>Form deduction</h3><p>Place clue words into a Case Note and test whether it holds.</p></li>
+      <li class="step reveal"><div class="fig"><img src="media/img/requestion-1280.webp" srcset="media/img/requestion-640.webp 640w, media/img/requestion-1280.webp 1280w, media/img/requestion-1920.webp 1920w" sizes="(min-width: 1000px) 300px, (min-width: 720px) 50vw, 100vw" width="1920" height="1080" alt="Aren presents a piece of evidence to Mira" loading="lazy" decoding="async"></div><h3>Re-question</h3><p>Bring evidence back to the person it contradicts.</p></li>
+      <li class="step reveal"><div class="fig"><img src="media/img/aha-1280.webp" srcset="media/img/aha-640.webp 640w, media/img/aha-1280.webp 1280w, media/img/aha-1920.webp 1920w" sizes="(min-width: 1000px) 300px, (min-width: 720px) 50vw, 100vw" width="1920" height="1080" alt="The realisation screen: 9:08 against 9:14, the connection breaks" loading="lazy" decoding="async"></div><h3>Resolve contradiction</h3><p>When the logic holds, the story moves forward.</p></li>
+    </ol>
+
+    <div class="casenotes">
+      <div class="reveal">
+        <p class="eyebrow">Case Notes</p>
+        <h3 class="h3">The game makes your reasoning visible.</h3>
+        <p>Instead of picking a culprit from a list, you build sentences from what you’ve found. The first contradiction is simple and it changes everything:</p>
+        <div class="contradiction" aria-label="Contradiction: the watch stopped at 9:08, the knocks came at 9:14">
+          <div><b>9:08</b><small>the watch stopped</small></div>
+          <span class="gap">six<br>minutes</span>
+          <div><b>9:14</b><small>four knocks</small></div>
+        </div>
+        <p>So the knocks cannot prove Victor was alive. It’s the first of four Case Notes.</p>
+      </div>
+      <div class="reveal">
+        <div class="loopbox fig"><video class="loop" muted loop playsinline preload="none" width="1280" height="720" poster="media/img/loop-case-notes-poster.webp" data-src-webm="media/video/loop-case-notes.webm" data-src-mp4="media/video/loop-case-notes.mp4" aria-label="Filling in and filing the first Case Note"></video><button class="loop-toggle" type="button" aria-label="Pause the loop" hidden>❚❚</button></div>
+        <p class="cap"><b>Case Note 01.</b> Clue words placed into a sentence, then filed. Real gameplay.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 07 PIVOTS ------------------------------------------------------------------------------------------------ -->
+<section id="pivots">
+  <div class="wrap">
+    <div class="reveal">
+      <p class="eyebrow">06 · Three pivots</p>
+      <h2 class="h2">Where the impressive option lost.</h2>
+      <div class="text"><p class="lead">Three decisions shaped the game more than any single asset. In each one, the more technically impressive option was the wrong one.</p></div>
+    </div>
+
+    <article class="pivot" aria-labelledby="pv1">
+      <div class="pivot-head reveal"><span class="pivot-num">Pivot 1</span><h3 class="h3" id="pv1">Full 3D → 2.5D</h3></div>
+      <div class="ba three reveal">
+        <figure class="ba-col"><span class="tag before">Before · prototype</span><div class="fig"><img src="media/img/p-3d-proto-1280.webp" srcset="media/img/p-3d-proto-640.webp 640w, media/img/p-3d-proto-1280.webp 1280w, media/img/p-3d-proto-1920.webp 1920w" sizes="(min-width: 1000px) 380px, (min-width: 720px) 50vw, 100vw" width="1920" height="1080" alt="The first technical prototype: a small low-poly lounge with tiny 3D characters and procedural furniture" loading="lazy" decoding="async"></div><figcaption>The first technical prototype: full 3D, tiny characters, procedural props.</figcaption></figure>
+        <figure class="ba-col"><span class="tag before">Before · full-3D hero</span><div class="fig"><img src="media/img/p-3d-hero-1280.webp" srcset="media/img/p-3d-hero-640.webp 640w, media/img/p-3d-hero-1280.webp 1280w, media/img/p-3d-hero-1920.webp 1920w" sizes="(min-width: 1000px) 380px, (min-width: 720px) 50vw, 100vw" width="1920" height="1080" alt="A fully 3D lounge with modelled human characters, built in Blender and rendered in Three.js" loading="lazy" decoding="async"></div><figcaption>The full-3D hero scene: modelled characters in a modelled lounge. Better, but not first-page quality.</figcaption></figure>
+        <figure class="ba-col"><span class="tag before">Before · my direction board</span><div class="fig"><img src="media/img/p-board-human-1280.webp" srcset="media/img/p-board-human-640.webp 640w, media/img/p-board-human-1280.webp 1280w, media/img/p-board-human-1448.webp 1448w" sizes="(min-width: 1000px) 380px, (min-width: 720px) 50vw, 100vw" width="1448" height="1086" alt="An early character board with a realistic human lead" loading="lazy" decoding="async"></div><figcaption>My early reference board for a realistic human cast, generated in ChatGPT.</figcaption></figure>
+      </div>
+      <div class="ba reveal">
+        <figure class="ba-col"><span class="tag after">Redirect · my new board</span><div class="fig"><img src="media/img/p-board-cast-1280.webp" srcset="media/img/p-board-cast-640.webp 640w, media/img/p-board-cast-1280.webp 1280w, media/img/p-board-cast-1672.webp 1672w" sizes="(min-width: 720px) 50vw, 100vw" width="1672" height="752" alt="A reference lineup of the illustrated animal cast: a platypus, a mongoose, a badger, a tortoise and a boar" loading="lazy" decoding="async"></div><figcaption>The redirected board: an illustrated animal cast. Reference only; the game’s art was produced separately.</figcaption></figure>
+        <figure class="ba-col"><span class="tag after">After · v1.0</span><div class="fig"><img src="media/img/cast-wide-1280.webp" srcset="media/img/cast-wide-640.webp 640w, media/img/cast-wide-1280.webp 1280w, media/img/cast-wide-1920.webp 1920w, media/img/cast-wide-2560.webp 2560w" sizes="(min-width: 720px) 50vw, 100vw" width="3840" height="2160" alt="The final game: illustrated 2D characters standing in the stylised 3D lounge of Cedar House" loading="lazy" decoding="async"></div><figcaption>The shipped look: simple illustrated characters inside a tactile stylised 3D house.</figcaption></figure>
+      </div>
+      <div class="text reveal">
+        <p>The first direction was fully 3D: modelled characters in a modelled lounge. On paper it was the more ambitious option. In practice it was harder to keep consistent, more expensive per character and pose, less distinctive, and less suited to a short mystery that lives on faces and reactions.</p>
+        <p>I stopped it at the visual gate and redirected the whole look. The characters became simple illustrated cutouts, acted through expressive poses, inside a stylised 3D world. That constraint became the game’s identity.</p>
+        <p class="takeaway"><span class="knock-mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span>Technical ambition is not the same as creative quality.</p>
+      </div>
+    </article>
+
+    <article class="pivot" aria-labelledby="pv2">
+      <div class="pivot-head reveal"><span class="pivot-num">Pivot 2</span><h3 class="h3" id="pv2">Over-engineering the locked room</h3></div>
+      <div class="latch-grid reveal">
+        <div class="diagram">
+          <span class="tag rejected">Rejected · simulate the trick</span>
+          <svg viewBox="0 0 420 250" role="img" aria-label="Diagram of the rejected method: a cord looped round a sliding bolt's knob on the inside of the door, run down and under the door, and pulled from outside">
+  <line x1="10" y1="224" x2="410" y2="224" stroke="#efe4c8" stroke-opacity=".5" stroke-width="2"/>
+  <rect x="192" y="22" width="26" height="192" fill="#22303a" stroke="#efe4c8" stroke-width="2"/>
+  <rect x="218" y="62" width="18" height="18" fill="#22303a" stroke="#efe4c8" stroke-width="2"/>
+  <circle cx="244" cy="71" r="7" fill="#cda75f"/>
+  <path d="M236 62 C 268 46, 272 96, 238 80" fill="none" stroke="#b3533b" stroke-width="2.5"/>
+  <path d="M238 80 C 262 130, 246 186, 226 216 L 186 219 L 150 218 C 112 216, 84 200, 66 172" fill="none" stroke="#b3533b" stroke-width="2.5" stroke-dasharray="1 0"/>
+  <path d="M66 172 l3 14 m-3 -14 l13 5" stroke="#b3533b" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <text x="258" y="56" font-family="Courier Prime, Courier New, monospace" font-size="11" fill="#aab7b4">sliding bolt + knob</text>
+  <text x="262" y="150" font-family="Courier Prime, Courier New, monospace" font-size="11" fill="#aab7b4">cord runs down</text>
+  <text x="150" y="240" font-family="Courier Prime, Courier New, monospace" font-size="11" fill="#aab7b4">under the door</text>
+  <text x="22" y="160" font-family="Courier Prime, Courier New, monospace" font-size="11" fill="#aab7b4">pulled from</text><text x="22" y="174" font-family="Courier Prime, Courier New, monospace" font-size="11" fill="#aab7b4">outside</text>
+  <text x="300" y="244" font-family="Barlow Condensed, Arial Narrow, sans-serif" font-weight="700" font-size="13" letter-spacing="1.5" fill="#efe4c8">INSIDE</text><text x="40" y="244" font-family="Barlow Condensed, Arial Narrow, sans-serif" font-weight="700" font-size="13" letter-spacing="1.5" fill="#efe4c8">OUTSIDE</text>
+</svg>
+          <div class="numbers"><div><b>619</b><span>simulated cord segments</span></div><div><b>0.5&nbsp;ms</b><span>physics steps</span></div><div><b>128</b><span>solver iterations</span></div></div>
+          <p class="fail">Still failed its own accuracy check after 0.474 simulated seconds.</p>
+        </div>
+        <div class="diagram">
+          <span class="tag after">Shipped · an ordinary spring night latch</span>
+          <svg viewBox="0 0 420 250" role="img" aria-label="Diagram of the shipped method: a spring night latch whose bevelled tongue catches in the strike when the door is pulled shut">
+  <rect x="330" y="40" width="46" height="170" fill="#22303a" stroke="#efe4c8" stroke-width="2"/>
+  <rect x="330" y="104" width="24" height="44" fill="#0b1117" stroke="#efe4c8" stroke-opacity=".6"/>
+  <rect x="64" y="84" width="224" height="84" rx="4" fill="#22303a" stroke="#efe4c8" stroke-width="2"/>
+  <path d="M104 126 l8 -12 l8 24 l8 -24 l8 24 l8 -24 l8 24 l8 -24 l8 24 l8 -24 l8 24 l6 -12" fill="none" stroke="#aab7b4" stroke-width="2"/>
+  <path d="M196 112 L 318 112 L 346 140 L 196 140 Z" fill="#cda75f"/>
+  <rect x="120" y="68" width="30" height="16" rx="3" fill="#b3533b"/>
+  <path d="M120 222 H 300" stroke="#cda75f" stroke-width="2"/><path d="M300 222 l-10 -6 m10 6 l-10 6" stroke="#cda75f" stroke-width="2" fill="none"/>
+  <text x="118" y="58" font-family="Courier Prime, Courier New, monospace" font-size="11" fill="#aab7b4">hold-back (released)</text>
+  <text x="104" y="160" font-family="Courier Prime, Courier New, monospace" font-size="11" fill="#aab7b4">spring</text>
+  <text x="206" y="104" font-family="Courier Prime, Courier New, monospace" font-size="11" fill="#aab7b4">bevelled tongue</text>
+  <text x="340" y="30" font-family="Courier Prime, Courier New, monospace" font-size="11" fill="#aab7b4">strike</text>
+  <text x="130" y="242" font-family="Courier Prime, Courier New, monospace" font-size="11" fill="#aab7b4">door pulled shut from outside</text>
+</svg>
+          <ol class="latch-steps"><li>Release the hold-back</li><li>Pull the door shut</li><li>The spring tongue catches</li></ol>
+        </div>
+      </div>
+      <div class="split reveal" style="margin-top:26px">
+        <div class="text">
+          <p>The locked room originally depended on a lace-and-bolt trick: a cord looped round a sliding bolt and pulled from under the door. The implementation responded by building a physics simulation of it, with hundreds of cord segments, friction models and force calculations. That was a lot of machinery for something the player only needs to understand.</p>
+          <p>I rejected it. The final mechanism is an ordinary spring night latch with a hold-back catch. It is deterministic, readable, and demonstrated in three steps the player performs.</p>
+          <p class="takeaway"><span class="knock-mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span>Use the cheapest reliable system that delivers the intended player experience.</p>
+        </div>
+        <figure><div class="loopbox fig"><video class="loop" muted loop playsinline preload="none" width="1280" height="720" poster="media/img/loop-latch-poster.webp" data-src-webm="media/video/loop-latch.webm" data-src-mp4="media/video/loop-latch.mp4" aria-label="The in-game reconstruction at Victor’s door, performed in three steps"></video><button class="loop-toggle" type="button" aria-label="Pause the loop" hidden>❚❚</button></div><figcaption><b>In the game.</b> The reconstruction at Victor’s door.</figcaption></figure>
+      </div>
+    </article>
+
+    <article class="pivot" aria-labelledby="pv3">
+      <div class="pivot-head reveal"><span class="pivot-num">Pivot 3</span><h3 class="h3" id="pv3">Sets → one real building</h3></div>
+      <div class="ba reveal">
+        <figure class="ba-col"><span class="tag before">Before</span><div class="fig"><img src="media/img/p-step9-room-1280.webp" srcset="media/img/p-step9-room-640.webp 640w, media/img/p-step9-room-1280.webp 1280w, media/img/p-step9-room-1600.webp 1600w" sizes="(min-width: 720px) 50vw, 100vw" width="1600" height="1000" alt="An earlier build: Victor’s room floating as a standalone set in a dark void" loading="lazy" decoding="async"></div><figcaption>An earlier build: every room was its own floating set.</figcaption></figure>
+        <figure class="ba-col"><span class="tag after">After · v1.0</span><div class="loopbox fig"><video class="loop" muted loop playsinline preload="none" width="1280" height="720" poster="media/img/loop-entry-poster.webp" data-src-webm="media/video/loop-entry.webm" data-src-mp4="media/video/loop-entry.mp4" aria-label="Aren walks in through the front door from the veranda into the lounge"></video><button class="loop-toggle" type="button" aria-label="Pause the loop" hidden>❚❚</button></div><figcaption>Now: walking in from the veranda. The veranda facade is the lounge’s west wall.</figcaption></figure>
+      </div>
+      <div class="split reveal">
+        <div class="text">
+          <p>The earlier environment problem wasn’t asset quality. It was spatial coherence: each room felt like a separate set. So the house was planned as one building before any room was touched.</p>
+          <p>The veranda facade is the lounge’s west wall, with the same windows and the same door. The stair climbs through the lounge’s north wall into the corridor above. Every door hangs on real hinges and opens the same way from both sides, and leaving a room means walking through it.</p>
+          <p class="takeaway"><span class="knock-mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span>Once the building made architectural sense, the atmosphere improved on its own.</p>
+        </div>
+        <figure class="diagram"><svg viewBox="0 0 480 262" role="img" aria-label="Section through Cedar House: the covered veranda outside the lounge's west wall with the front door between them; the stair rising through the lounge's north wall into the upper corridor; Victor's room, number 202, off the corridor">
+  <g stroke="#aab7b4" stroke-opacity=".55" stroke-width="1.3"><line x1="24" y1="30" x2="19" y2="46" /><line x1="44" y1="58" x2="39" y2="74" /><line x1="64" y1="22" x2="59" y2="38" /><line x1="36" y1="96" x2="31" y2="112" /><line x1="58" y1="128" x2="53" y2="144" /><line x1="80" y1="74" x2="75" y2="90" /><line x1="22" y1="150" x2="17" y2="166" /><line x1="46" y1="180" x2="41" y2="196" /><line x1="72" y1="160" x2="67" y2="176" /><line x1="94" y1="116" x2="89" y2="132" /><line x1="100" y1="40" x2="95" y2="56" /><line x1="30" y1="206" x2="25" y2="222" /></g>
+  <path d="M120 60 L 300 18 L 470 60" fill="none" stroke="#efe4c8" stroke-width="2"/>
+  <rect x="120" y="60" width="350" height="190" fill="none" stroke="#efe4c8" stroke-width="2"/>
+  <line x1="120" y1="150" x2="470" y2="150" stroke="#efe4c8" stroke-width="2"/>
+  <line x1="300" y1="60" x2="300" y2="150" stroke="#efe4c8" stroke-width="2"/>
+  <path d="M20 170 L 120 150" stroke="#efe4c8" stroke-width="2" fill="none"/>
+  <line x1="20" y1="250" x2="470" y2="250" stroke="#efe4c8" stroke-width="2"/>
+  <rect x="116" y="196" width="8" height="54" fill="#cda75f"/>
+  <rect x="296" y="104" width="8" height="46" fill="#cda75f"/>
+  <path d="M352 250 l0 -12 h12 v-12 h12 v-12 h12 v-12 h12 v-12 h12 v-12 h12 v-12 h12 v-12 h12" fill="none" stroke="#cda75f" stroke-width="2"/>
+  <rect x="140" y="222" width="30" height="28" fill="none" stroke="#b3533b" stroke-width="2"/>
+  <text x="28" y="238" font-family="Barlow Condensed, Arial Narrow, sans-serif" font-weight="700" font-size="15" letter-spacing="1.5" fill="#efe4c8">VERANDA</text>
+  <text x="196" y="200" font-family="Barlow Condensed, Arial Narrow, sans-serif" font-weight="700" font-size="15" letter-spacing="1.5" fill="#efe4c8">LOUNGE</text><text x="136" y="214" font-family="Courier Prime, Courier New, monospace" font-size="13" fill="#aab7b4">hearth</text>
+  <text x="140" y="112" font-family="Barlow Condensed, Arial Narrow, sans-serif" font-weight="700" font-size="15" letter-spacing="1.5" fill="#efe4c8">VICTOR’S ROOM</text>
+  <text x="314" y="112" font-family="Barlow Condensed, Arial Narrow, sans-serif" font-weight="700" font-size="15" letter-spacing="1.5" fill="#efe4c8">UPPER CORRIDOR</text>
+  <text x="262" y="96" font-family="Courier Prime, Courier New, monospace" font-size="13" fill="#aab7b4">202</text>
+</svg><figcaption><b>Cedar House in section.</b> In brass: the front door in the lounge’s west wall, Victor’s door (202), and the stair through the lounge’s north wall.</figcaption></figure>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- 08 OPENING EVOLUTION ------------------------------------------------------------------------------------- -->
+<section id="opening">
+  <div class="wrap">
+    <div class="reveal">
+      <p class="eyebrow">07 · The opening, four times</p>
+      <h2 class="h2">Four openings. One target.</h2>
+      <div class="text"><p class="lead">The 40-second opening (an unsigned letter, a night train, a ghat road, a lit house) was rebuilt several times. These four versions show the production method changing while the target held.</p></div>
+    </div>
+    <div class="evo reveal">
+      <div class="evo-col">
+        <h3><small>V1</small>3D cinematic</h3>
+        <div class="fig"><img src="media/img/op-v1-house-960.webp" srcset="media/img/op-v1-house-640.webp 640w, media/img/op-v1-house-960.webp 960w" sizes="(min-width: 1000px) 290px, (min-width: 720px) 50vw, 100vw" width="960" height="400" alt="Version 1: Cedar House as a 3D render" loading="lazy" decoding="async"></div>
+        <div class="fig"><img src="media/img/op-v1-ghat-960.webp" srcset="media/img/op-v1-ghat-640.webp 640w, media/img/op-v1-ghat-960.webp 960w" sizes="(min-width: 1000px) 290px, (min-width: 720px) 50vw, 100vw" width="960" height="400" alt="Version 1: the bus on the ghat road in 3D" loading="lazy" decoding="async"></div>
+        <ul class="verdicts"><li class="plus">Technically polished.</li><li class="minus">The wrong medium for an illustrated cast.</li></ul>
+      </div>
+      <div class="evo-col">
+        <h3><small>V2</small>Code-drawn 2D</h3>
+        <div class="fig"><img src="media/img/op-v2-house-960.webp" srcset="media/img/op-v2-house-640.webp 640w, media/img/op-v2-house-960.webp 960w" sizes="(min-width: 1000px) 290px, (min-width: 720px) 50vw, 100vw" width="960" height="400" alt="Version 2: Cedar House drawn in code" loading="lazy" decoding="async"></div>
+        <div class="fig"><img src="media/img/op-v2-ghat-960.webp" srcset="media/img/op-v2-ghat-640.webp 640w, media/img/op-v2-ghat-960.webp 960w" sizes="(min-width: 1000px) 290px, (min-width: 720px) 50vw, 100vw" width="960" height="400" alt="Version 2: the ghat road and bus drawn in code" loading="lazy" decoding="async"></div>
+        <ul class="verdicts"><li class="plus">The right medium.</li><li class="minus">It felt programmer-generated.</li></ul>
+      </div>
+      <div class="evo-col">
+        <h3><small>V3</small>ComfyUI painted + animated</h3>
+        <div class="fig"><img src="media/img/op-v3-house-960.webp" srcset="media/img/op-v3-house-640.webp 640w, media/img/op-v3-house-960.webp 960w" sizes="(min-width: 1000px) 290px, (min-width: 720px) 50vw, 100vw" width="960" height="400" alt="Version 3: a painted Cedar House" loading="lazy" decoding="async"></div>
+        <div class="fig"><img src="media/img/op-v3-ghat-960.webp" srcset="media/img/op-v3-ghat-640.webp 640w, media/img/op-v3-ghat-960.webp 960w" sizes="(min-width: 1000px) 290px, (min-width: 720px) 50vw, 100vw" width="960" height="400" alt="Version 3: a painted ghat road with an inset sign" loading="lazy" decoding="async"></div>
+        <ul class="verdicts"><li class="plus">Painterly atmosphere and real motion.</li><li class="minus">Not every generated movement was equally strong.</li></ul>
+      </div>
+      <div class="evo-col final">
+        <h3><small>Final</small>Hybrid</h3>
+        <div class="fig"><img src="media/img/op-final-house-1280.webp" srcset="media/img/op-final-house-640.webp 640w, media/img/op-final-house-1280.webp 1280w, media/img/op-final-house-1920.webp 1920w" sizes="(min-width: 1000px) 290px, (min-width: 720px) 50vw, 100vw" width="1920" height="800" alt="Final opening: the painted Cedar House" loading="lazy" decoding="async"></div>
+        <div class="fig"><img src="media/img/op-final-ghat-1280.webp" srcset="media/img/op-final-ghat-640.webp 640w, media/img/op-final-ghat-1280.webp 1280w, media/img/op-final-ghat-1920.webp 1920w" sizes="(min-width: 1000px) 290px, (min-width: 720px) 50vw, 100vw" width="1920" height="800" alt="Final opening: the code-drawn ghat road kept from version 2" loading="lazy" decoding="async"></div>
+        <ul class="verdicts"><li class="final">The painted shots, the code-drawn ghat road, and the 3D move into play.</li></ul>
+      </div>
+    </div>
+    <div class="text reveal" style="margin-top:30px">
+      <p class="muted">In V3, each painting was guided by the code-drawn layout of its own shot (Z-Image-Turbo with ControlNet), then brought to life with Wan 2.2 image-to-video. Aren himself is always the approved drawings, never regenerated.</p>
+      <p class="takeaway"><span class="knock-mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span>The production method was allowed to change. The creative target was not.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 09 HOW IT WAS MADE --------------------------------------------------------------------------------------- -->
+<section id="made">
+  <div class="wrap">
+    <div class="reveal">
+      <p class="eyebrow">08 · AI orchestration</p>
+      <h2 class="h2">How it was made</h2>
+      <div class="text"><p class="lead">Different systems did different jobs. The direction held them together: briefs, critique, acceptance gates and the decision about what survived.</p></div>
+    </div>
+    <div class="org reveal" aria-label="Production system">
+      <div class="node director"><span class="kind">The centre</span><h3>Creative direction</h3><p>Nikhil Desai: vision, mystery, characters, quality bar, pivots, final acceptance</p></div>
+      <div class="link-rule" aria-hidden="true"></div><p class="link-label">briefs · reviews · acceptance gates</p>
+      <div class="builders">
+        <div class="node"><span class="kind">Primary AI builder · foundation</span><h3>GPT-6 Astra</h3><p>Early prototypes and research; the 2.5D build in the browser; the story, investigation, Case Note and Residual systems; the locked-room demonstration. It generated the illustrated character sheets with Codex’s built-in image generation.</p></div>
+        <div class="node"><span class="kind">Primary AI builder · production &amp; finishing</span><h3>Claude Opus 5.5</h3><p>Creative audit and presentation; the Cedar House rebuild; Blender hero furniture; all four openings; the complete voice, music and sound pipeline; the final director’s polish; the trailer; and this page.</p></div>
+      </div>
+      <div class="link-rule" aria-hidden="true"></div><p class="link-label">directed tools</p>
+      <div class="toolgroups">
+        <div class="node"><span class="kind">Visual &amp; world</span><h3>Pictures &amp; places</h3><div class="chips"><span>ComfyUI</span><span>Z-Image-Turbo + ControlNet</span><span>Wan 2.2 TI2V-5B</span><span>Blender</span><span>Codex image generation</span></div></div>
+        <div class="node"><span class="kind">Runtime</span><h3>The game</h3><div class="chips"><span>Three.js r180</span><span>JavaScript modules</span><span>Web Audio</span><span>Canvas</span></div></div>
+        <div class="node"><span class="kind">Audio</span><h3>Voice &amp; sound</h3><div class="chips"><span>Chatterbox TTS</span><span>Kokoro-82M refs</span><span>Stable Audio 3</span><span>Python DSP</span></div></div>
+        <div class="node"><span class="kind">Finishing &amp; QA</span><h3>Proof &amp; polish</h3><div class="chips"><span>Headless Chrome</span><span>FFmpeg</span><span>Speech recognition QC</span><span>DaVinci Resolve</span></div></div>
+      </div>
+    </div>
+
+    <table class="stack-table reveal">
+      <caption class="eyebrow">Each tool’s actual job</caption>
+      <tbody>
+        <tr><th>GPT-6 Astra<small>in Codex</small></th><td>The foundation: research, the first 3D prototypes, then the 2.5D browser build with its story state, investigation, Case Notes, Residuals and the locked-room demonstration. Generated the illustrated character atlases with Codex’s built-in image generation.</td></tr>
+        <tr><th>Claude Opus 5.5<small>in Claude Code</small></th><td>Production and finishing: the creative audit, acting and presentation, rebuilding Cedar House as one building, the hero furniture, the opening’s four versions, the full audio pipeline, the final defect pass, the trailer and this page.</td></tr>
+        <tr><th>ComfyUI<small>local, 0.37</small></th><td>Painted the opening’s plates (Z-Image-Turbo with the Z-Image Fun ControlNet, guided by each shot’s layout), animated them (Wan 2.2 TI2V-5B), and generated score, ambience and raw effects (Stable Audio 3 Medium).</td></tr>
+        <tr><th>Blender<small>4.5 and 5.2, scripted</small></th><td>The first full-3D hero scene; later the Cedar House exterior and the lounge and bedroom hero furniture, all built from Python scripts.</td></tr>
+        <tr><th>Three.js<small>r180, JavaScript modules</small></th><td>The game itself: a browser-first renderer with no build step, a fixed orthographic camera, and the 2D cast as deforming cutouts in a 3D house.</td></tr>
+        <tr><th>Chatterbox TTS + Kokoro-82M<small>local</small></th><td>98 voiced lines, chosen from 713 rendered takes. Kokoro supplied original synthetic reference timbres only; no real person’s voice was used.</td></tr>
+        <tr><th>Python DSP<small>numpy, scipy, librosa, pyloudnorm</small></th><td>Editing, seamless loops, room acoustics, the Residual sound, loudness and every audio quality check.</td></tr>
+        <tr><th>Windows speech recognition<small>offline</small></th><td>Intelligibility and negation checks on every voice take.</td></tr>
+        <tr><th>Headless Chrome + FFmpeg</th><td>Automated playthroughs and regression checks, deterministic frame-by-frame capture for the trailer and this page, and every encode.</td></tr>
+        <tr><th>DaVinci Resolve Studio<small>21.1</small></th><td>The trailer’s editable timeline. The final cut was rendered by a scripted compositor.</td></tr>
+        <tr><th>ChatGPT<small>image generation</small></th><td>My own reference boards for the visual direction. Reference only; none of it ships in the game.</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- 10 AUDIO ------------------------------------------------------------------------------------------------ -->
+<section id="audio">
+  <div class="wrap">
+    <div class="reveal">
+      <p class="eyebrow">09 · Audio</p>
+      <h2 class="h2">Audio was a production, not a layer.</h2>
+      <div class="text"><p class="lead">Every line was cast, performed and checked. The score was made for the story’s states, and each space got its own air. The audio pipeline was its own project, with its own tests.</p></div>
+      <div class="counts">
+        <div class="count"><b>98</b><span>voice lines</span></div>
+        <div class="count"><b>9</b><span>music cues</span></div>
+        <div class="count"><b>10</b><span>ambience beds</span></div>
+        <div class="count"><b>52</b><span>effect files</span></div>
+      </div>
+    </div>
+
+    <div class="walls reveal" data-walls>
+      <p class="eyebrow">One storm, different walls</p>
+      <h3 class="h3">The same monsoon, heard from four places.</h3>
+      <p class="muted">Each clip is the game’s own ambience bed, at the game’s relative levels. Press one to listen.</p>
+      <div class="wall-btns">
+        <button class="wall-btn" type="button" aria-pressed="false" data-src="media/audio/storm-veranda.mp3"><b>Veranda</b><span>rain on stone, just beyond the roof</span></button>
+        <button class="wall-btn" type="button" aria-pressed="false" data-src="media/audio/storm-lounge.mp3"><b>Lounge</b><span>through shut windows, a small fire</span></button>
+        <button class="wall-btn" type="button" aria-pressed="false" data-src="media/audio/storm-corridor.mp3"><b>Corridor</b><span>muffled, cooler, closer</span></button>
+        <button class="wall-btn" type="button" aria-pressed="false" data-src="media/audio/storm-victor.mp3"><b>Victor’s room</b><span>still air, rain on the glass</span></button>
+      </div>
+    </div>
+
+    <div class="knocks">
+      <div class="reveal">
+        <p class="eyebrow">The Four Knocks</p>
+        <h3 class="h3">Three strikes. A longer pause. A fourth.</h3>
+        <p>The knocks are both a clue and the game’s sonic identity. Their rhythm is a contract, fixed wherever it appears: in the game, its captions, the letter’s underline, the trailer and the title.</p>
+        <details><summary>How they were built</summary><ul>
+          <li>Each strike layers a generated knuckle-on-door transient, a floor thud for weight, and synthesised wood resonances.</li>
+          <li>At 9:14 they’re heard from the lounge, through the ceiling and down the stairwell. At dawn it’s the same strikes, heard through Victor’s door.</li>
+          <li>Strikes land at 0.15, 1.10, 2.05 and 4.30 seconds. The fourth is slightly firmer.</li>
+          <li>The mix was rebalanced so the wood still reads on laptop speakers.</li>
+        </ul></details>
+      </div>
+      <div class="knock-player reveal" data-knocks>
+        <div class="knock-bars" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+        <svg class="wave" viewBox="0 0 240 64" preserveAspectRatio="none" role="img" aria-label="Waveform of the Four Knocks"><path d="M0.0 31.4h0.72v1.2h-0.72zM1.0 31.4h0.72v1.2h-0.72zM2.0 31.4h0.72v1.2h-0.72zM3.0 31.4h0.72v1.2h-0.72zM4.0 31.4h0.72v1.2h-0.72zM5.0 31.4h0.72v1.2h-0.72zM6.0 5.8h0.72v52.3h-0.72zM7.0 20.8h0.72v22.5h-0.72zM8.0 26.0h0.72v12.1h-0.72zM9.0 27.0h0.72v10.0h-0.72zM10.0 29.0h0.72v6.0h-0.72zM11.0 29.8h0.72v4.4h-0.72zM12.0 30.2h0.72v3.5h-0.72zM13.0 30.8h0.72v2.4h-0.72zM14.0 31.1h0.72v1.9h-0.72zM15.0 31.3h0.72v1.4h-0.72zM16.0 31.2h0.72v1.6h-0.72zM17.0 31.4h0.72v1.2h-0.72zM18.0 31.4h0.72v1.2h-0.72zM19.0 31.4h0.72v1.2h-0.72zM20.0 31.4h0.72v1.2h-0.72zM21.0 31.4h0.72v1.2h-0.72zM22.0 31.4h0.72v1.2h-0.72zM23.0 31.4h0.72v1.2h-0.72zM24.0 31.4h0.72v1.2h-0.72zM25.0 31.4h0.72v1.2h-0.72zM26.0 31.4h0.72v1.2h-0.72zM27.0 31.4h0.72v1.2h-0.72zM28.0 31.4h0.72v1.2h-0.72zM29.0 31.4h0.72v1.2h-0.72zM30.0 31.4h0.72v1.2h-0.72zM31.0 31.4h0.72v1.2h-0.72zM32.0 31.4h0.72v1.2h-0.72zM33.0 31.4h0.72v1.2h-0.72zM34.0 31.4h0.72v1.2h-0.72zM35.0 31.4h0.72v1.2h-0.72zM36.0 31.4h0.72v1.2h-0.72zM37.0 31.4h0.72v1.2h-0.72zM38.0 31.4h0.72v1.2h-0.72zM39.0 31.4h0.72v1.2h-0.72zM40.0 31.4h0.72v1.2h-0.72zM41.0 31.4h0.72v1.2h-0.72zM42.0 31.4h0.72v1.2h-0.72zM43.0 31.4h0.72v1.2h-0.72zM44.0 31.4h0.72v1.2h-0.72zM45.0 5.9h0.72v52.3h-0.72zM46.0 13.1h0.72v37.7h-0.72zM47.0 25.7h0.72v12.7h-0.72zM48.0 26.2h0.72v11.6h-0.72zM49.0 28.1h0.72v7.9h-0.72zM50.0 29.8h0.72v4.4h-0.72zM51.0 30.4h0.72v3.2h-0.72zM52.0 30.8h0.72v2.3h-0.72zM53.0 31.1h0.72v1.9h-0.72zM54.0 31.2h0.72v1.6h-0.72zM55.0 31.3h0.72v1.4h-0.72zM56.0 31.4h0.72v1.2h-0.72zM57.0 31.4h0.72v1.2h-0.72zM58.0 31.4h0.72v1.2h-0.72zM59.0 31.4h0.72v1.2h-0.72zM60.0 31.4h0.72v1.2h-0.72zM61.0 31.4h0.72v1.2h-0.72zM62.0 31.4h0.72v1.2h-0.72zM63.0 31.4h0.72v1.2h-0.72zM64.0 31.4h0.72v1.2h-0.72zM65.0 31.4h0.72v1.2h-0.72zM66.0 31.4h0.72v1.2h-0.72zM67.0 31.4h0.72v1.2h-0.72zM68.0 31.4h0.72v1.2h-0.72zM69.0 31.4h0.72v1.2h-0.72zM70.0 31.4h0.72v1.2h-0.72zM71.0 31.4h0.72v1.2h-0.72zM72.0 31.4h0.72v1.2h-0.72zM73.0 31.4h0.72v1.2h-0.72zM74.0 31.4h0.72v1.2h-0.72zM75.0 31.4h0.72v1.2h-0.72zM76.0 31.4h0.72v1.2h-0.72zM77.0 31.4h0.72v1.2h-0.72zM78.0 31.4h0.72v1.2h-0.72zM79.0 31.4h0.72v1.2h-0.72zM80.0 31.4h0.72v1.2h-0.72zM81.0 31.4h0.72v1.2h-0.72zM82.0 31.4h0.72v1.2h-0.72zM83.0 31.4h0.72v1.2h-0.72zM84.0 26.6h0.72v10.9h-0.72zM85.0 5.9h0.72v52.3h-0.72zM86.0 24.0h0.72v16.1h-0.72zM87.0 26.8h0.72v10.4h-0.72zM88.0 27.5h0.72v8.9h-0.72zM89.0 29.6h0.72v4.7h-0.72zM90.0 30.5h0.72v3.0h-0.72zM91.0 30.8h0.72v2.5h-0.72zM92.0 30.6h0.72v2.8h-0.72zM93.0 31.0h0.72v2.0h-0.72zM94.0 31.2h0.72v1.5h-0.72zM95.0 31.4h0.72v1.2h-0.72zM96.0 31.4h0.72v1.2h-0.72zM97.0 31.4h0.72v1.2h-0.72zM98.0 31.4h0.72v1.2h-0.72zM99.0 31.4h0.72v1.2h-0.72zM100.0 31.4h0.72v1.2h-0.72zM101.0 31.4h0.72v1.2h-0.72zM102.0 31.4h0.72v1.2h-0.72zM103.0 31.4h0.72v1.2h-0.72zM104.0 31.4h0.72v1.2h-0.72zM105.0 31.4h0.72v1.2h-0.72zM106.0 31.4h0.72v1.2h-0.72zM107.0 31.4h0.72v1.2h-0.72zM108.0 31.4h0.72v1.2h-0.72zM109.0 31.4h0.72v1.2h-0.72zM110.0 31.4h0.72v1.2h-0.72zM111.0 31.4h0.72v1.2h-0.72zM112.0 31.4h0.72v1.2h-0.72zM113.0 31.4h0.72v1.2h-0.72zM114.0 31.4h0.72v1.2h-0.72zM115.0 31.4h0.72v1.2h-0.72zM116.0 31.4h0.72v1.2h-0.72zM117.0 31.4h0.72v1.2h-0.72zM118.0 31.4h0.72v1.2h-0.72zM119.0 31.4h0.72v1.2h-0.72zM120.0 31.4h0.72v1.2h-0.72zM121.0 31.4h0.72v1.2h-0.72zM122.0 31.4h0.72v1.2h-0.72zM123.0 31.4h0.72v1.2h-0.72zM124.0 31.4h0.72v1.2h-0.72zM125.0 31.4h0.72v1.2h-0.72zM126.0 31.4h0.72v1.2h-0.72zM127.0 31.4h0.72v1.2h-0.72zM128.0 31.4h0.72v1.2h-0.72zM129.0 31.4h0.72v1.2h-0.72zM130.0 31.4h0.72v1.2h-0.72zM131.0 31.4h0.72v1.2h-0.72zM132.0 31.4h0.72v1.2h-0.72zM133.0 31.4h0.72v1.2h-0.72zM134.0 31.4h0.72v1.2h-0.72zM135.0 31.4h0.72v1.2h-0.72zM136.0 31.4h0.72v1.2h-0.72zM137.0 31.4h0.72v1.2h-0.72zM138.0 31.4h0.72v1.2h-0.72zM139.0 31.4h0.72v1.2h-0.72zM140.0 31.4h0.72v1.2h-0.72zM141.0 31.4h0.72v1.2h-0.72zM142.0 31.4h0.72v1.2h-0.72zM143.0 31.4h0.72v1.2h-0.72zM144.0 31.4h0.72v1.2h-0.72zM145.0 31.4h0.72v1.2h-0.72zM146.0 31.4h0.72v1.2h-0.72zM147.0 31.4h0.72v1.2h-0.72zM148.0 31.4h0.72v1.2h-0.72zM149.0 31.4h0.72v1.2h-0.72zM150.0 31.4h0.72v1.2h-0.72zM151.0 31.4h0.72v1.2h-0.72zM152.0 31.4h0.72v1.2h-0.72zM153.0 31.4h0.72v1.2h-0.72zM154.0 31.4h0.72v1.2h-0.72zM155.0 31.4h0.72v1.2h-0.72zM156.0 31.4h0.72v1.2h-0.72zM157.0 31.4h0.72v1.2h-0.72zM158.0 31.4h0.72v1.2h-0.72zM159.0 31.4h0.72v1.2h-0.72zM160.0 31.4h0.72v1.2h-0.72zM161.0 31.4h0.72v1.2h-0.72zM162.0 31.4h0.72v1.2h-0.72zM163.0 31.4h0.72v1.2h-0.72zM164.0 31.4h0.72v1.2h-0.72zM165.0 31.4h0.72v1.2h-0.72zM166.0 31.4h0.72v1.2h-0.72zM167.0 31.4h0.72v1.2h-0.72zM168.0 31.4h0.72v1.2h-0.72zM169.0 31.4h0.72v1.2h-0.72zM170.0 31.4h0.72v1.2h-0.72zM171.0 31.4h0.72v1.2h-0.72zM172.0 31.4h0.72v1.2h-0.72zM173.0 31.4h0.72v1.2h-0.72zM174.0 31.4h0.72v1.2h-0.72zM175.0 31.4h0.72v1.2h-0.72zM176.0 31.4h0.72v1.2h-0.72zM177.0 31.4h0.72v1.2h-0.72zM178.0 2.0h0.72v60.0h-0.72zM179.0 19.2h0.72v25.6h-0.72zM180.0 22.1h0.72v19.7h-0.72zM181.0 25.3h0.72v13.3h-0.72zM182.0 27.6h0.72v8.8h-0.72zM183.0 28.6h0.72v6.7h-0.72zM184.0 29.1h0.72v5.9h-0.72zM185.0 30.2h0.72v3.6h-0.72zM186.0 30.3h0.72v3.4h-0.72zM187.0 30.9h0.72v2.3h-0.72zM188.0 30.9h0.72v2.3h-0.72zM189.0 31.1h0.72v1.7h-0.72zM190.0 31.4h0.72v1.3h-0.72zM191.0 31.4h0.72v1.2h-0.72zM192.0 31.4h0.72v1.2h-0.72zM193.0 31.4h0.72v1.2h-0.72zM194.0 31.4h0.72v1.2h-0.72zM195.0 31.4h0.72v1.2h-0.72zM196.0 31.4h0.72v1.2h-0.72zM197.0 31.4h0.72v1.2h-0.72zM198.0 31.4h0.72v1.2h-0.72zM199.0 31.4h0.72v1.2h-0.72zM200.0 31.4h0.72v1.2h-0.72zM201.0 31.4h0.72v1.2h-0.72zM202.0 31.4h0.72v1.2h-0.72zM203.0 31.4h0.72v1.2h-0.72zM204.0 31.4h0.72v1.2h-0.72zM205.0 31.4h0.72v1.2h-0.72zM206.0 31.4h0.72v1.2h-0.72zM207.0 31.4h0.72v1.2h-0.72zM208.0 31.4h0.72v1.2h-0.72zM209.0 31.4h0.72v1.2h-0.72zM210.0 31.4h0.72v1.2h-0.72zM211.0 31.4h0.72v1.2h-0.72zM212.0 31.4h0.72v1.2h-0.72zM213.0 31.4h0.72v1.2h-0.72zM214.0 31.4h0.72v1.2h-0.72zM215.0 31.4h0.72v1.2h-0.72zM216.0 31.4h0.72v1.2h-0.72zM217.0 31.4h0.72v1.2h-0.72zM218.0 31.4h0.72v1.2h-0.72zM219.0 31.4h0.72v1.2h-0.72zM220.0 31.4h0.72v1.2h-0.72zM221.0 31.4h0.72v1.2h-0.72zM222.0 31.4h0.72v1.2h-0.72zM223.0 31.4h0.72v1.2h-0.72zM224.0 31.4h0.72v1.2h-0.72zM225.0 31.4h0.72v1.2h-0.72zM226.0 31.4h0.72v1.2h-0.72zM227.0 31.4h0.72v1.2h-0.72zM228.0 31.4h0.72v1.2h-0.72zM229.0 31.4h0.72v1.2h-0.72zM230.0 31.4h0.72v1.2h-0.72zM231.0 31.4h0.72v1.2h-0.72zM232.0 31.4h0.72v1.2h-0.72zM233.0 31.4h0.72v1.2h-0.72zM234.0 31.4h0.72v1.2h-0.72zM235.0 31.4h0.72v1.2h-0.72zM236.0 31.4h0.72v1.2h-0.72zM237.0 31.4h0.72v1.2h-0.72zM238.0 31.4h0.72v1.2h-0.72zM239.0 31.4h0.72v1.2h-0.72z"/></svg>
+        <button class="btn primary" type="button" data-knock-play>Play the Four Knocks</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 11 AI QA ------------------------------------------------------------------------------------------------- -->
+<section id="qa">
+  <div class="wrap">
+    <div class="split">
+      <div class="reveal">
+        <p class="eyebrow">10 · Quality control</p>
+        <div class="qa-lines" aria-label="The intended line, I didn't knock, and the reversed reading, I did knock">
+          <span class="qa-line">“I didn’t knock.”</span>
+          <span class="qa-line wrong">“I did knock.”</span>
+        </div>
+        <div class="qa-meter" role="img" aria-label="16 of 18 takes heard reversed"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i class="ok"></i><i class="ok"></i></div>
+        <p class="cap">16 of 18 generated takes were heard as the opposite.</p>
+      </div>
+      <div class="text reveal">
+        <h3 class="h3">Convincing isn’t the same as correct.</h3>
+        <p>One line near the end of the story rests on a single syllable. The voice model kept swallowing the “n’t”, and speech recognition heard 16 of 18 takes as “I did knock”: the opposite meaning, in the line where meaning matters most. The automatic selection would have shipped the reversal.</p>
+        <p>So the pipeline gained a polarity test. Every line whose meaning rests on a negation (19 of them) is checked against its flipped twin, and a take heard reversed can’t be chosen.</p>
+        <p class="takeaway"><span class="knock-mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span>AI output can’t be accepted because it sounds convincing. It has to preserve intent.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 12 FINAL POLISH ------------------------------------------------------------------------------------------ -->
+<section id="polish">
+  <div class="wrap">
+    <div class="reveal">
+      <p class="eyebrow">11 · Final polish</p>
+      <p class="quote">By the end, the project didn’t need more ideas. <em>It needed fewer visible mistakes.</em></p>
+      <div class="text" style="margin-top:26px"><p>The last pass added no features. It hunted visible defects:</p></div>
+      <ul class="polish-list"><li>Head clipping</li><li>Sprite consistency</li><li>Furniture intersections</li><li>Collision</li><li>Depth &amp; occlusion</li><li>Z-fighting</li><li>Door traversal</li><li>Staging</li><li>Eyelines</li><li>UI clipping</li><li>Audio start-up</li></ul>
+    </div>
+    <div class="twomm reveal">
+      <div class="big-number">2 mm<small>the size of the fix</small></div>
+      <figure class="loop-flicker">
+        <div class="loopbox fig"><video class="loop" muted loop playsinline preload="none" width="976" height="300" poster="media/img/loop-flicker-poster.webp" data-src-webm="media/video/loop-flicker.webm" data-src-mp4="media/video/loop-flicker.mp4" aria-label="The lounge coffee table before and after the fix: on the left its top flickers, on the right it is stable"></video><button class="loop-toggle" type="button" aria-label="Pause the loop" hidden>❚❚</button></div>
+        <div class="flicker-labels"><span class="tag before">Before · the table blinks</span><span class="tag after">After · 2 mm apart</span></div>
+        <figcaption>The lounge table’s inlay and teak top sat at exactly the same height. The camera’s constant micro-motion kept flipping which surface won, so the table blinked. Real frames from the defect probe.</figcaption>
+      </figure>
+    </div>
+    <figure class="reveal" style="margin-top:44px">
+      <div class="fig"><img src="media/img/p-headrig-1280.webp" srcset="media/img/p-headrig-640.webp 640w, media/img/p-headrig-1280.webp 1280w, media/img/p-headrig-1600.webp 1600w" sizes="(min-width: 1260px) 1200px, 100vw" width="1600" height="411" alt="Aren’s head poses before and after the fix: seams at the neck in the old rig, continuous in the new one" loading="lazy" decoding="async"></div>
+      <figcaption><b>Head clipping.</b> Heads were separate cutouts, so a tilt could open a seam. Top: a simulation of the old rig, with gaps in red. Bottom: the final rig in engine, where each pose is one deforming mesh.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- 13 TIMELINE ---------------------------------------------------------------------------------------------- -->
+<section id="evolution">
+  <div class="wrap">
+    <div class="reveal">
+      <p class="eyebrow">12 · Evolution</p>
+      <h2 class="h2">It didn’t come from one prompt.</h2>
+    </div>
+    <ol class="timeline reveal">
+      <li><div class="thumb"><span class="knock-mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span></div><div><h3>Concept</h3><p>The story, the rational murder, the unexplained knocks, the cast.</p></div></li>
+      <li><div class="thumb"><img src="media/img/t-3d.webp" width="480" height="300" alt="Full-3D hero scene" loading="lazy" decoding="async"></div><div><h3>Full 3D direction</h3><p>Modelled characters in a modelled lounge. Stopped at the visual gate.</p></div></li>
+      <li><div class="thumb"><img src="media/img/t-25d.webp" width="480" height="300" alt="The first 2.5D lounge" loading="lazy" decoding="async"></div><div><h3>2.5D pivot</h3><p>Illustrated cutouts inside a stylised 3D house.</p></div></li>
+      <li><div class="thumb"><img src="media/img/t-browser.webp" width="480" height="300" alt="The browser-first build" loading="lazy" decoding="async"></div><div><h3>Browser-first architecture</h3><p>Plain JavaScript modules and Three.js. No build step; it runs in any modern desktop browser.</p></div></li>
+      <li><div class="thumb"><img src="media/img/t-house.webp" width="480" height="300" alt="The rebuilt veranda" loading="lazy" decoding="async"></div><div><h3>Cedar House rebuild</h3><p>One building, walked passages, doors that open both ways.</p></div></li>
+      <li><div class="thumb"><img src="media/img/t-opening.webp" width="480" height="300" alt="The painted opening" loading="lazy" decoding="async"></div><div><h3>Hybrid animated opening</h3><p>Four production methods, one target.</p></div></li>
+      <li><div class="thumb"><svg class="wave-thumb" viewBox="0 0 240 150" preserveAspectRatio="none" role="img" aria-label="The Four Knocks"><path d="M0.0 73.5h0.72v2.9h-0.72zM1.0 73.5h0.72v2.9h-0.72zM2.0 73.5h0.72v2.9h-0.72zM3.0 73.5h0.72v2.9h-0.72zM4.0 73.5h0.72v2.9h-0.72zM5.0 73.5h0.72v2.9h-0.72zM6.0 11.3h0.72v127.3h-0.72zM7.0 47.6h0.72v54.8h-0.72zM8.0 60.3h0.72v29.3h-0.72zM9.0 62.8h0.72v24.4h-0.72zM10.0 67.7h0.72v14.6h-0.72zM11.0 69.6h0.72v10.8h-0.72zM12.0 70.7h0.72v8.6h-0.72zM13.0 72.1h0.72v5.8h-0.72zM14.0 72.7h0.72v4.5h-0.72zM15.0 73.3h0.72v3.4h-0.72zM16.0 73.1h0.72v3.8h-0.72zM17.0 73.5h0.72v2.9h-0.72zM18.0 73.5h0.72v2.9h-0.72zM19.0 73.5h0.72v2.9h-0.72zM20.0 73.5h0.72v2.9h-0.72zM21.0 73.5h0.72v2.9h-0.72zM22.0 73.5h0.72v2.9h-0.72zM23.0 73.5h0.72v2.9h-0.72zM24.0 73.5h0.72v2.9h-0.72zM25.0 73.5h0.72v2.9h-0.72zM26.0 73.5h0.72v2.9h-0.72zM27.0 73.5h0.72v2.9h-0.72zM28.0 73.5h0.72v2.9h-0.72zM29.0 73.5h0.72v2.9h-0.72zM30.0 73.5h0.72v2.9h-0.72zM31.0 73.5h0.72v2.9h-0.72zM32.0 73.5h0.72v2.9h-0.72zM33.0 73.5h0.72v2.9h-0.72zM34.0 73.5h0.72v2.9h-0.72zM35.0 73.5h0.72v2.9h-0.72zM36.0 73.5h0.72v2.9h-0.72zM37.0 73.5h0.72v2.9h-0.72zM38.0 73.5h0.72v2.9h-0.72zM39.0 73.5h0.72v2.9h-0.72zM40.0 73.5h0.72v2.9h-0.72zM41.0 73.5h0.72v2.9h-0.72zM42.0 73.5h0.72v2.9h-0.72zM43.0 73.5h0.72v2.9h-0.72zM44.0 73.5h0.72v2.9h-0.72zM45.0 11.4h0.72v127.2h-0.72zM46.0 29.1h0.72v91.8h-0.72zM47.0 59.6h0.72v30.8h-0.72zM48.0 60.9h0.72v28.2h-0.72zM49.0 65.4h0.72v19.1h-0.72zM50.0 69.7h0.72v10.7h-0.72zM51.0 71.1h0.72v7.7h-0.72zM52.0 72.2h0.72v5.7h-0.72zM53.0 72.7h0.72v4.5h-0.72zM54.0 73.1h0.72v3.8h-0.72zM55.0 73.2h0.72v3.5h-0.72zM56.0 73.5h0.72v2.9h-0.72zM57.0 73.5h0.72v2.9h-0.72zM58.0 73.5h0.72v2.9h-0.72zM59.0 73.5h0.72v2.9h-0.72zM60.0 73.5h0.72v2.9h-0.72zM61.0 73.5h0.72v2.9h-0.72zM62.0 73.5h0.72v2.9h-0.72zM63.0 73.5h0.72v2.9h-0.72zM64.0 73.5h0.72v2.9h-0.72zM65.0 73.5h0.72v2.9h-0.72zM66.0 73.5h0.72v2.9h-0.72zM67.0 73.5h0.72v2.9h-0.72zM68.0 73.5h0.72v2.9h-0.72zM69.0 73.5h0.72v2.9h-0.72zM70.0 73.5h0.72v2.9h-0.72zM71.0 73.5h0.72v2.9h-0.72zM72.0 73.5h0.72v2.9h-0.72zM73.0 73.5h0.72v2.9h-0.72zM74.0 73.5h0.72v2.9h-0.72zM75.0 73.5h0.72v2.9h-0.72zM76.0 73.5h0.72v2.9h-0.72zM77.0 73.5h0.72v2.9h-0.72zM78.0 73.5h0.72v2.9h-0.72zM79.0 73.5h0.72v2.9h-0.72zM80.0 73.5h0.72v2.9h-0.72zM81.0 73.5h0.72v2.9h-0.72zM82.0 73.5h0.72v2.9h-0.72zM83.0 73.5h0.72v2.9h-0.72zM84.0 61.8h0.72v26.4h-0.72zM85.0 11.4h0.72v127.2h-0.72zM86.0 55.4h0.72v39.1h-0.72zM87.0 62.4h0.72v25.3h-0.72zM88.0 64.1h0.72v21.8h-0.72zM89.0 69.2h0.72v11.5h-0.72zM90.0 71.3h0.72v7.3h-0.72zM91.0 72.0h0.72v6.0h-0.72zM92.0 71.6h0.72v6.9h-0.72zM93.0 72.6h0.72v4.8h-0.72zM94.0 73.2h0.72v3.7h-0.72zM95.0 73.5h0.72v2.9h-0.72zM96.0 73.5h0.72v2.9h-0.72zM97.0 73.5h0.72v2.9h-0.72zM98.0 73.5h0.72v2.9h-0.72zM99.0 73.5h0.72v2.9h-0.72zM100.0 73.5h0.72v2.9h-0.72zM101.0 73.5h0.72v2.9h-0.72zM102.0 73.5h0.72v2.9h-0.72zM103.0 73.5h0.72v2.9h-0.72zM104.0 73.5h0.72v2.9h-0.72zM105.0 73.5h0.72v2.9h-0.72zM106.0 73.5h0.72v2.9h-0.72zM107.0 73.5h0.72v2.9h-0.72zM108.0 73.5h0.72v2.9h-0.72zM109.0 73.5h0.72v2.9h-0.72zM110.0 73.5h0.72v2.9h-0.72zM111.0 73.5h0.72v2.9h-0.72zM112.0 73.5h0.72v2.9h-0.72zM113.0 73.5h0.72v2.9h-0.72zM114.0 73.5h0.72v2.9h-0.72zM115.0 73.5h0.72v2.9h-0.72zM116.0 73.5h0.72v2.9h-0.72zM117.0 73.5h0.72v2.9h-0.72zM118.0 73.5h0.72v2.9h-0.72zM119.0 73.5h0.72v2.9h-0.72zM120.0 73.5h0.72v2.9h-0.72zM121.0 73.5h0.72v2.9h-0.72zM122.0 73.5h0.72v2.9h-0.72zM123.0 73.5h0.72v2.9h-0.72zM124.0 73.5h0.72v2.9h-0.72zM125.0 73.5h0.72v2.9h-0.72zM126.0 73.5h0.72v2.9h-0.72zM127.0 73.5h0.72v2.9h-0.72zM128.0 73.5h0.72v2.9h-0.72zM129.0 73.5h0.72v2.9h-0.72zM130.0 73.5h0.72v2.9h-0.72zM131.0 73.5h0.72v2.9h-0.72zM132.0 73.5h0.72v2.9h-0.72zM133.0 73.5h0.72v2.9h-0.72zM134.0 73.5h0.72v2.9h-0.72zM135.0 73.5h0.72v2.9h-0.72zM136.0 73.5h0.72v2.9h-0.72zM137.0 73.5h0.72v2.9h-0.72zM138.0 73.5h0.72v2.9h-0.72zM139.0 73.5h0.72v2.9h-0.72zM140.0 73.5h0.72v2.9h-0.72zM141.0 73.5h0.72v2.9h-0.72zM142.0 73.5h0.72v2.9h-0.72zM143.0 73.5h0.72v2.9h-0.72zM144.0 73.5h0.72v2.9h-0.72zM145.0 73.5h0.72v2.9h-0.72zM146.0 73.5h0.72v2.9h-0.72zM147.0 73.5h0.72v2.9h-0.72zM148.0 73.5h0.72v2.9h-0.72zM149.0 73.5h0.72v2.9h-0.72zM150.0 73.5h0.72v2.9h-0.72zM151.0 73.5h0.72v2.9h-0.72zM152.0 73.5h0.72v2.9h-0.72zM153.0 73.5h0.72v2.9h-0.72zM154.0 73.5h0.72v2.9h-0.72zM155.0 73.5h0.72v2.9h-0.72zM156.0 73.5h0.72v2.9h-0.72zM157.0 73.5h0.72v2.9h-0.72zM158.0 73.5h0.72v2.9h-0.72zM159.0 73.5h0.72v2.9h-0.72zM160.0 73.5h0.72v2.9h-0.72zM161.0 73.5h0.72v2.9h-0.72zM162.0 73.5h0.72v2.9h-0.72zM163.0 73.5h0.72v2.9h-0.72zM164.0 73.5h0.72v2.9h-0.72zM165.0 73.5h0.72v2.9h-0.72zM166.0 73.5h0.72v2.9h-0.72zM167.0 73.5h0.72v2.9h-0.72zM168.0 73.5h0.72v2.9h-0.72zM169.0 73.5h0.72v2.9h-0.72zM170.0 73.5h0.72v2.9h-0.72zM171.0 73.5h0.72v2.9h-0.72zM172.0 73.5h0.72v2.9h-0.72zM173.0 73.5h0.72v2.9h-0.72zM174.0 73.5h0.72v2.9h-0.72zM175.0 73.5h0.72v2.9h-0.72zM176.0 73.5h0.72v2.9h-0.72zM177.0 73.5h0.72v2.9h-0.72zM178.0 2.0h0.72v146.0h-0.72zM179.0 43.9h0.72v62.2h-0.72zM180.0 51.0h0.72v48.0h-0.72zM181.0 58.8h0.72v32.4h-0.72zM182.0 64.3h0.72v21.5h-0.72zM183.0 66.8h0.72v16.4h-0.72zM184.0 67.8h0.72v14.3h-0.72zM185.0 70.6h0.72v8.8h-0.72zM186.0 70.9h0.72v8.2h-0.72zM187.0 72.2h0.72v5.5h-0.72zM188.0 72.2h0.72v5.5h-0.72zM189.0 72.9h0.72v4.2h-0.72zM190.0 73.5h0.72v3.1h-0.72zM191.0 73.5h0.72v2.9h-0.72zM192.0 73.5h0.72v2.9h-0.72zM193.0 73.5h0.72v2.9h-0.72zM194.0 73.5h0.72v2.9h-0.72zM195.0 73.5h0.72v2.9h-0.72zM196.0 73.5h0.72v2.9h-0.72zM197.0 73.5h0.72v2.9h-0.72zM198.0 73.5h0.72v2.9h-0.72zM199.0 73.5h0.72v2.9h-0.72zM200.0 73.5h0.72v2.9h-0.72zM201.0 73.5h0.72v2.9h-0.72zM202.0 73.5h0.72v2.9h-0.72zM203.0 73.5h0.72v2.9h-0.72zM204.0 73.5h0.72v2.9h-0.72zM205.0 73.5h0.72v2.9h-0.72zM206.0 73.5h0.72v2.9h-0.72zM207.0 73.5h0.72v2.9h-0.72zM208.0 73.5h0.72v2.9h-0.72zM209.0 73.5h0.72v2.9h-0.72zM210.0 73.5h0.72v2.9h-0.72zM211.0 73.5h0.72v2.9h-0.72zM212.0 73.5h0.72v2.9h-0.72zM213.0 73.5h0.72v2.9h-0.72zM214.0 73.5h0.72v2.9h-0.72zM215.0 73.5h0.72v2.9h-0.72zM216.0 73.5h0.72v2.9h-0.72zM217.0 73.5h0.72v2.9h-0.72zM218.0 73.5h0.72v2.9h-0.72zM219.0 73.5h0.72v2.9h-0.72zM220.0 73.5h0.72v2.9h-0.72zM221.0 73.5h0.72v2.9h-0.72zM222.0 73.5h0.72v2.9h-0.72zM223.0 73.5h0.72v2.9h-0.72zM224.0 73.5h0.72v2.9h-0.72zM225.0 73.5h0.72v2.9h-0.72zM226.0 73.5h0.72v2.9h-0.72zM227.0 73.5h0.72v2.9h-0.72zM228.0 73.5h0.72v2.9h-0.72zM229.0 73.5h0.72v2.9h-0.72zM230.0 73.5h0.72v2.9h-0.72zM231.0 73.5h0.72v2.9h-0.72zM232.0 73.5h0.72v2.9h-0.72zM233.0 73.5h0.72v2.9h-0.72zM234.0 73.5h0.72v2.9h-0.72zM235.0 73.5h0.72v2.9h-0.72zM236.0 73.5h0.72v2.9h-0.72zM237.0 73.5h0.72v2.9h-0.72zM238.0 73.5h0.72v2.9h-0.72zM239.0 73.5h0.72v2.9h-0.72z"/></svg></div><div><h3>Full audio production</h3><p>Cast, score, rooms, the knocks, and a QA pipeline.</p></div></li>
+      <li><div class="thumb"><img src="media/img/t-polish.webp" width="480" height="300" alt="The finished lounge" loading="lazy" decoding="async"></div><div><h3>Final director’s polish</h3><p>No new features. Fewer visible mistakes.</p></div></li>
+      <li class="v1"><div class="thumb"><img src="media/img/t-v1.webp" width="480" height="300" alt="The title" loading="lazy" decoding="async"></div><div><h3>v1.0</h3><p>Frozen, archived and playable. September 2026.</p></div></li>
+    </ol>
+  </div>
+</section>
+
+<!-- 14 SNAPSHOT + LESSONS ------------------------------------------------------------------------------------ -->
+<section class="paper" id="snapshot">
+  <div class="wrap reveal">
+    <p class="eyebrow">13 · The finished game</p>
+    <h2 class="h2">Case file</h2>
+    <div class="snapshot">
+      <div><b>~18 min</b><span>short mystery</span></div>
+      <div><b>5</b><span>principal characters</span></div>
+      <div><b>2D</b><span>illustrated cast</span></div>
+      <div><b>3D</b><span>stylised world</span></div>
+      <div><b>98</b><span>voiced lines</span></div>
+      <div><b>Original</b><span>score and sound</span></div>
+      <div><b>4</b><span>Case Notes to deduce</span></div>
+      <div><b>3</b><span>Residual events</span></div>
+      <div><b>1</b><span>rational murder</span></div>
+      <div><b>4</b><span>unexplained knocks</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="learned">
+  <div class="wrap">
+    <div class="reveal">
+      <p class="eyebrow">14 · What I learned</p>
+      <h2 class="h2">Four lessons</h2>
+    </div>
+    <ol class="lessons">
+      <li class="reveal"><h3>Taste matters more when execution gets cheaper.</h3><p>Fast generation raises the value of deciding what deserves to survive.</p></li>
+      <li class="reveal"><h3>Constraints improve AI production.</h3><p>The game got stronger when it gave up the more technically ambitious 3D direction.</p></li>
+      <li class="reveal"><h3>Models need direction, not just prompts.</h3><p>The strongest work came from specifying intent and constraints, while leaving implementation free.</p></li>
+      <li class="reveal"><h3>Finishing is not generating.</h3><p>Final quality came from consistency, continuity, readability, pacing, testing and defect removal.</p></li>
+    </ol>
+    <div class="reflection reveal" style="margin-top:clamp(70px,11vw,130px)">
+      <p class="eyebrow">Reflection</p>
+      <p class="quote">Working creatively with AI felt less like operating a generator and more like directing an <em>unusually fast multidisciplinary production team.</em></p>
+      <p style="margin-top:28px">The systems can produce code, images, environments, animation and sound. They don’t decide which version deserves to survive. Throughout production one question stayed the same:</p>
+      <p class="ask">Does this serve the experience?</p>
+      <p>When the answer was no, the work changed, however technically impressive it was.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 15 FINAL CTA --------------------------------------------------------------------------------------------- -->
+<section class="final-cta" id="play">
+  <div class="wrap reveal">
+    <p class="byline" style="text-align:center">Something happened at Cedar House.</p>
+    <p class="wordmark" aria-hidden="true"><span class="knock-mark"><i></i><i></i><i></i><i></i></span><span class="wm-text"><span class="wm-the">The</span><span class="wm-fourth">Fourth</span><span class="wm-knock">Knock</span></span></p>
+    <p class="lead" style="text-align:center;margin-inline:auto">Find out what.</p>
+    <div class="ctas">
+      <a class="btn primary" href="play/">Play the game <span class="arrow" aria-hidden="true">▶</span></a>
+      <a class="btn" href="#trailer" data-trailer-link>Watch the trailer</a>
+    </div>
+    <p class="hero-meta">Desktop browser · keyboard · about 18 minutes · sound recommended</p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="cols">
+      <div>
+        <h2>Credits &amp; AI disclosure</h2>
+        <p><em>The Fourth Knock</em> is an AI-native production. <b>Nikhil Desai</b>: concept, mystery and narrative, characters, game and visual direction, production direction of every AI system, and final acceptance.</p>
+        <p>Primary AI builders: <b>GPT-6 Astra</b> (foundation) and <b>Claude Opus 5.5</b> (production and finishing). Code, character art, environments, animation, voices, music and sound were produced by AI systems and the tools listed in <a href="#made">How it was made</a>, under my direction and review.</p>
+      </div>
+      <div>
+        <h2>Play</h2>
+        <p><a href="play/">Play <em>The Fourth Knock</em></a><br>Desktop browser with a keyboard. About 18 minutes. Sound on.</p>
+        <p><a href="media/video/trailer-1080.mp4">Trailer (MP4, 1080p)</a></p>
+      </div>
+      <div>
+        <h2>Version</h2>
+        <p>v1.0 · September 2026</p>
+        <p class="muted">Fonts: Newsreader, Barlow Condensed and Courier Prime, under the SIL Open Font License.</p>
+      </div>
+    </div>
+    <p class="fine">Everything shown on this page comes from the finished game or its genuine production history.</p>
+  </div>
+</footer>
+
+<script src="main.js" defer></script>
+</body>
+</html>
